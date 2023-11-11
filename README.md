@@ -1,5 +1,6 @@
 #  IOAccessoryManager library testing
 
+## About
 Somewhat of a WIP. **IOAccessoryManager** is another undocumented IOKit API that looks kinda interesting. I haven't been a able to find any references to it anywhere online!
 
 Snooping around my system, I found It has a relationship with different physical IO on your device, mainly USB-C, and seems to have some control over those ports? When you plug/unplug USB-C devices (charging cables, display, etc.) from are many logs in the kernel referencing it's class, as well as other classes **IOPort** and **IOPortTransportState**.
@@ -12,6 +13,9 @@ Naaah...I wish. The display limitations are mostly hardware as far as I know, bu
 
 😝
 
-Anyway, just messing around with some of the symbols in the tbd file and seeing what I can do. You can find all the symbols at libIOAccessoryManager.tbd somewhere in your developer frameworks. Most of the methods return what you can see in the IORegistry already. There is also IOAccessoryPort methods, but haven't found IOServices that match the class.
+Anyway, just messing around with some of the symbols in the tbd file and seeing what I can do. Just dumps data right now. You can find all the symbols at `libIOAccessoryManager.tbd` somewhere in your developer frameworks. Most of the methods return what you can see in the IORegistry already. There is also IOAccessoryPort methods, but haven't found IOServices that match the class.
 
 Maybe I'll figure out whats up with IOPort at some point.
+
+## Building
+You probably already know but just use the makefile. It'll produce a binary `main`.
